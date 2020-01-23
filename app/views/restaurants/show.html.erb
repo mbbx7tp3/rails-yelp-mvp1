@@ -13,9 +13,11 @@ Its address is: <%= @restaurant[:address] %>
   <% @restaurant.reviews.each do |review| %>
   <div class="card">
   <p> <%= review.content%> </p>
-  <p> The funds rating is: <%= review.rating %> </p>
+  <p> The restaurants rating is: <%= review.rating %> </p>
   </div>
   <% end %>
 </ul>
 
-<%= link_to "Add review", new_restaurant_review_path(@restaurant) %>
+<%= link_to "Add review", new_restaurant_review_path(@restaurant), class: "btn btn-primary btn-sm" %>
+<br>
+<%= link_to "Go back to all restaurants", restaurants_path, class: "btn btn-primary btn-sm" %>
