@@ -9,9 +9,12 @@ Its Cusisine is: <%= @restaurant[:category] %>
 Its address is: <%= @restaurant[:address] %>
 </p>
 
-<ul>
+<h1> Reviews </h1>
   <% @restaurant.reviews.each do |review| %>
-  <li> <%= review.content %></li>
+  <div class="card">
+  <p> <%= review.content%> </p>
+  <p> The funds rating is: <%= review.rating %> </p>
+  </div>
   <% end %>
 </ul>
 
